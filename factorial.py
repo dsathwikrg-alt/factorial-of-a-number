@@ -14,11 +14,16 @@ def num_factorial_iterative(input_num: int) -> int:
 
     print("input_num is: " + str(input_num))
 
-    result = 1
-    for i in range(1, input_num+1):
-        result *= i
+    if input_num<0:
+        error_msg= "Error: Number given is less than 0."
+        return error_msg
+    else:    
 
-    return result
+        result = 1
+        for i in range(1, input_num+1):
+            result *= i
+
+        return result
 
 def main():
 
